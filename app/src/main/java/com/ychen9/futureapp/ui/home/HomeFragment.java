@@ -12,6 +12,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.ychen9.futureapp.R;
 
 public class HomeFragment extends Fragment {
@@ -30,6 +33,12 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        AdView adView = root.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+
+
         return root;
     }
 }

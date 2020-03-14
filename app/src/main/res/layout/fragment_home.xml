@@ -6,6 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TEXT"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-7857473971466854/5712938367">
+        </com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
